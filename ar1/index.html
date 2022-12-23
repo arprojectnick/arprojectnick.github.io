@@ -61,7 +61,7 @@
         <img id="pause" src="61039.png" />
         <video
           id="vid"
-          src="final%20seinfeld.mp4"
+          src="https://github.com/arprojectnick/arprojectnick.github.io/blob/main/finalseinfeld.mp4?raw=true"
           preload="auto"
         ></video>
       </a-assets>
@@ -72,28 +72,13 @@
       <a-nft
         videohandler
         type="nft"
-        url="rframe"
+        url="/rframe"
         smooth="true"
         smoothCount="10"
         smoothTolerance="0.01"
         smoothThreshold="5"
       >
-        <a-video
-          src="#vid"
-          position="180 0 -100"
-          rotation="100 0 180"
-          width="384"
-          height="288"
-        >
-          <a-image
-            id="videoControls"
-            src="#play"
-            position="0 -200 0"
-            scale="100 100 0"
-            play-pause
-          >
-          </a-image>
-        </a-video>
+        <a-box position='100 0.5 -180' material='opacity: 0.5; side: double' scale="100 100 100"></a-box>
       </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
