@@ -5,21 +5,10 @@
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
-      AFRAME.registerComponent("play-pause", {
-        init: function () {
-          var myVideo = document.querySelector("#vid");
-          var videoControls = document.querySelector("#videoControls");
-          this.el.addEventListener("click", function () {
-            if (myVideo.paused) {
-              myVideo.play();
-              videoControls.setAttribute("src", "#pause");
-            } else {
-              myVideo.pause();
-              videoControls.setAttribute("src", "#play");
-            }
-          });
-        },
-      });
+    window.addEventListener('click', function () {
+      var v = document.querySelector('#vid');
+      v.play();
+    });
     </script>
     
   </head>
@@ -56,8 +45,6 @@
       arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
     >
       <a-assets>
-        <img id="play" src="White-Play-Silhoutte-PNG-File-Download-Free.png" />
-        <img id="pause" src="61039.png" />
         <video playsinline
           id="vid"
           src="https://github.com/arprojectnick/arprojectnick.github.io/blob/6449319a2e2d9f4abf5230f3f42111a216bcadb9/fs.mp4" 
@@ -86,14 +73,6 @@
           width="384"
           height="288"
         >
-          <a-image
-            id="videoControls"
-            src="#play"
-            position="0 -200 0"
-            scale="100 100 0"
-            play-pause
-          >
-          </a-image>
         </a-video>
       </a-nft>
       <a-entity camera></a-entity>
