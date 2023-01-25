@@ -43,31 +43,26 @@
       arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
     >
       <a-assets>
-        <video
-          id="vid"
-          src="https://github.com/arprojectnick/arprojectnick.github.io/blob/bb128ed1ed31f5e980dad086d7e687baba2e6c8c/finalseinfeld.mp4"
-          crossorigin="anonymous"
-          preload="auto"     
-        ></video>
+        <img id="myim" src="en3.png">
       </a-assets>
 
       <a-nft
         videohandler
         type="nft"
-        url="rframe"
+        url="scan"
         smooth="true"
         smoothCount="10"
         smoothTolerance="0.01"
         smoothThreshold="5"
       >
-        <a-video
-          src="#vid"
+        <a-image
+          src="#myim"
           position="200 -200 -100"
           rotation="-100 0 0"
           width="384"
           height="288"
         >
-        </a-video>
+        </a-image>
       </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
